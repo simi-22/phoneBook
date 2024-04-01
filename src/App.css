@@ -1,0 +1,149 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: NanumSquare;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.container {
+    display: flex;
+    max-width: 800px;
+    border: 1px solid #ebebeb;
+    margin: 0 auto;
+}
+
+#contact-form {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #ebebeb;
+}
+#contact-form li {
+    margin-bottom: 10px;
+}
+#contact-form li label {
+    display: block;
+    position: relative;
+    font-size: 12px;
+    color: #575757;
+    padding-left: 5px;
+    margin-bottom: 2px;
+}
+#contact-form li label::after {
+    content: '*';
+    position: absolute;
+    top: -5px;
+    left: -2px;
+    color: red;
+    font-size: 15px;
+
+}
+#contact-form li:nth-of-type(3) label::after{
+    content: "";
+}
+#contact-form li input {
+    width: 200px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+#contact-form button {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#contact-form .save-btn {
+    background-color: tomato;
+    color: #fff;
+}
+#contact-form .cancel-btn {
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+}
+#contact-list {
+    width: 50%;
+    background-color: #ebebeb;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+#search-box {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+}
+#search-box input {
+    width: 200px;
+    padding: 5px 10px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+#search-box button {
+    position: absolute;
+    top: calc(50% - 7px);
+    right: 15px;
+}
+
+#contact-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#contact-item div:nth-of-type(1){
+    width: 20%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+#contact-item img {
+    width: 100%;
+    margin-right: 10px;
+}
+#contact-item div:nth-of-type(2){
+    width: 80%;
+    font-size: 15px;
+}
+#contact-item div:nth-of-type(2) p:nth-of-type(1){
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#contact-item div:nth-of-type(2) p:nth-of-type(2){
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+#contact-item div:nth-of-type(2) p:nth-of-type(3){
+    font-size: 14px;
+}
+
+
+@media (max-width:480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-form{
+        width: 100%;
+    }
+    #contact-list{
+        width: 100%;
+    }
+}
