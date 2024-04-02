@@ -1,6 +1,12 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTrash} from '@fortawesome/free-solid-svg-icons';
 
 const ContactItem = ({item}) => {
+    // const handleDelete = () => {
+    //     onDelete(item.id); 
+    //   };
+
   return (
     <div id='contact-item'>
         <div>
@@ -11,6 +17,7 @@ const ContactItem = ({item}) => {
             <p>{item.number}</p>
             <p>{item.email}</p>
         </div>
+        <button type='button' id="trash-item-btn"><FontAwesomeIcon icon={faTrash}/></button>
     </div>
   )
 }
