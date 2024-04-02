@@ -15,6 +15,14 @@ function reducer(state = initialState, action){
                     },
                 ],
             };
+            case "DELETE_CONTACT": {
+                return {
+                    ...state,
+                    contactList: state.contactList.filter(contact => 
+                        contact.id !== payload.id
+                    )
+                }
+            }
         case "SEARCH_NAME":
             return { ...state, keyword: payload.keyword };
         default:

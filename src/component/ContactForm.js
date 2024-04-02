@@ -4,17 +4,19 @@ import { useDispatch } from 'react-redux';
 
 const ContactForm = () => {
     const [name, setName] = useState('');
-    const [number, setNumber] = useState(0);
+    const [number, setNumber] = useState('010');
     const [email, setEmail] = useState('');
     const dispatch = useDispatch();
 
     const addContact = (event) => {
         event.preventDefault();
-        dispatch({type:"ADD_CONTACT", payload:{name, number, email}})
+        dispatch({type:"ADD_CONTACT", payload:{name, number, email}});
+        
+        cancelItem()
     }
     const cancelItem = () => {
         setName('');
-        setNumber('');
+        setNumber('010');
         setEmail('');
     }
 
