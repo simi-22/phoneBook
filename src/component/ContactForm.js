@@ -1,5 +1,5 @@
 import { type } from '@testing-library/user-event/dist/type';
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useDispatch } from 'react-redux';
 
 const ContactForm = () => {
@@ -7,13 +7,22 @@ const ContactForm = () => {
     const [number, setNumber] = useState('010');
     const [email, setEmail] = useState('');
     const dispatch = useDispatch();
+    const contactId = useRef(0);
 
     const addContact = (event) => {
         event.preventDefault();
-        dispatch({type:"ADD_CONTACT", payload:{name, number, email}});
+        dispatch({
+            type:"ADD_CONTACT", 
+            payload:{
+            name, number, email, id:contactId.current,
+            }
+    });
+        contactId.current++;
+        cancelItem();
         
-        cancelItem()
     }
+
+
     const cancelItem = () => {
         setName('');
         setNumber('010');

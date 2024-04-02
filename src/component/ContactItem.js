@@ -2,9 +2,9 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTrash} from '@fortawesome/free-solid-svg-icons';
 
-const ContactItem = ({item, onDelete}) => {
+const ContactItem = ({item, onDelete, id}) => {
     const handleDelete = () => {
-        onDelete(item.id); 
+        onDelete(id); 
       };
 
   return (

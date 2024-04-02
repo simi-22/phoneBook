@@ -33,7 +33,7 @@ const ContactList = () => {
     <div id='contact-list'>
         <SearchBox />
         {filteredList.map((item, index) => (
-          <ContactItem item={item} key={index.id} onDelete={onDelete}/>
+          <ContactItem item={item} key={item.id} onDelete={onDelete} />
         ))}
     </div>
   )
