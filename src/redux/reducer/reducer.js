@@ -11,7 +11,7 @@ function reducer(state = initialState, action){
                 ...state, contactList:
                 [...state.contactList,
                     {
-                        name:payload.name,number:payload.number,
+                        name:payload.name,number:payload.number,email:payload.email
                     },
                 ],
             };

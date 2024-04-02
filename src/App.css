@@ -108,6 +108,7 @@ button {
     padding: 10px;
     box-sizing: border-box;
     background-color: #fff;
+    margin-bottom: 10px;
 }
 #contact-item div:nth-of-type(1){
     width: 20%;
